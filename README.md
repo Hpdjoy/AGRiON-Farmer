@@ -57,30 +57,27 @@ To get started with the Agrion project locally, follow the steps below.
 - Firebase account and project
 - ESP32 board for sensor data collection
 
-### Installation
+## Installation
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/agrion.git
 ```
 
-
-## Installation
-
-1. Install dependencies:
+2. Install dependencies:
 
 ```bash
 cd aiagriculture
 npm install 
 ```
-## Set up Firebase in the project:
+3. Set up Firebase in the project:
 Create a Firebase project in the Firebase Console
 
 Enable Firebase Realtime Database and Firestore
 
 Add your Firebase configuration to the project (check firebase.js)
 
-## Run the development server:
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -166,7 +163,7 @@ Water Pump: Controlled via GPIO pin
 Users can control these actuators manually via the dashboard or automatically when in automated mode.
 
 # Threshold Settings
-# Threshold values for each sensor (temperature, humidity, light, soil moisture, pH, nitrogen, phosphorus, potassium) are adjustable based on the selected crop type and growth phase. These values are pre-configured for different crops and growth stages, but users can modify them for their specific needs.
+Threshold values for each sensor (temperature, humidity, light, soil moisture, pH, nitrogen, phosphorus, potassium) are adjustable based on the selected crop type and growth phase. These values are pre-configured for different crops and growth stages, but users can modify them for their specific needs.
 
 # Contributing
 We welcome contributions to improve the Agrion project! Feel free to fork the repository and submit pull requests. Please follow these steps:
@@ -183,5 +180,5 @@ Push to the branch (git push origin feature-branch)
 Open a pull request
 
 ## License
-# This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 

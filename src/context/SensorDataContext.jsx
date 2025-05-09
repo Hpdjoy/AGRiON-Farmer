@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { db, rdb } from '../../firebase';
 import { ref, onValue } from 'firebase/database';
-import { collection, addDoc, onSnapshot, query, getDocs } from 'firebase/firestore';
+import { collection, addDoc, onSnapshot, query, getDocs, orderBy, limit } from 'firebase/firestore';
 
 const SensorDataContext = createContext();
 
@@ -32,13 +32,15 @@ export const SensorDataProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
-  
-
   // 2️⃣ Real-time listener for chart data from Firestore (updated to fetch data every 2 minutes)
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const q = query(collection(db, 'Soil_Moisture_Data'));
+        const q = query(
+          collection(db, 'Soil_Moisture_Data'),
+          orderBy('time', 'desc'),
+          limit(10)
+        );
         const querySnapshot = await getDocs(q);
 
         const moistureValue = querySnapshot.docs
@@ -54,7 +56,7 @@ export const SensorDataProvider = ({ children }) => {
           })
           .sort((a, b) => a.time - b.time); // sort by timestamp
 
-        setChartData(moistureValue.slice(-10)); // Keep only the latest 10 records
+        setChartData(moistureValue);
       } catch (error) {
         console.error("❌ Error fetching data from Firestore:", error);
       }
@@ -64,30 +66,30 @@ export const SensorDataProvider = ({ children }) => {
     fetchData();
 
     // Fetch data every 2 minutes (120,000 ms)
-    const interval = setInterval(fetchData, 120000); 
+    const interval = setInterval(fetchData, 120000);
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
-  // 3️⃣ Push current soil moisture every 2 minutes (already updated)
-  // useEffect(() => {
-  //   const interval = setInterval(async () => {
-  //     try {
-  //       const timestamp = new Date();
+  // 3️⃣ Push current soil moisture every 2 minutes
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      try {
+        const timestamp = new Date();
 
-  //       await addDoc(collection(db, 'Soil_Moisture_Data'), {
-  //         Moisture_value: sensorData.soilMoisture,
-  //         time: timestamp,
-  //       });
+        await addDoc(collection(db, 'Soil_Moisture_Data'), {
+          Moisture_value: sensorData.soilMoisture,
+          time: timestamp,
+        });
 
-  //       console.log("✅ Soil moisture data pushed to Firestore at", timestamp.toLocaleTimeString());
-  //     } catch (error) {
-  //       console.error("❌ Error pushing soil moisture data to Firestore:", error);
-  //     }
-  //   }, 120000); // 2 minutes = 120,000 ms
+        console.log("✅ Soil moisture data pushed to Firestore at", timestamp.toLocaleTimeString());
+      } catch (error) {
+        console.error("❌ Error pushing soil moisture data to Firestore:", error);
+      }
+    }, 120000); // 2 minutes = 120,000 ms
 
-  //   return () => clearInterval(interval);
-  // }, [sensorData.soilMoisture]);
+    return () => clearInterval(interval);
+  }, [sensorData.soilMoisture]);
 
   return (
     <SensorDataContext.Provider value={{ sensorData, chartData }}>

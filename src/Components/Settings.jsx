@@ -244,12 +244,12 @@ function Settings() {
               label="Manual Control"
             />
             <FormControlLabel
-              value="automated"
+              value="automatic"
               control={<Radio color="success" />}
               label="Automated Control"
             />
           </RadioGroup>
-          {editableSettings.monitoringMode === "automated"? (
+          {editableSettings.monitoringMode === "automatic"? (
             <p className="text-sm text-gray-600 mt-2">
               ⚙️ Automated mode: adjusts thresholds based on real-time data and past trends.
             </p>

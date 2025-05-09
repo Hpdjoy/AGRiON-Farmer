@@ -2,7 +2,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // 🔐 Move this to an .env file in production
-const genAI = new GoogleGenerativeAI("AIzaSyDuloVAukiTxXmIpAGDNAZkaIuFRdrxOTk");
+const genAI = new GoogleGenerativeAI("//Paste your gemini api Key here"); 
 
 export async function askGemini(prompt) {
   try {

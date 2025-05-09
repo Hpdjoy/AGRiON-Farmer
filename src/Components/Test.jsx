@@ -83,7 +83,7 @@ const Test = () => {
     <div className="bg-gray-50 min-h-screen">
       {/* Top Header */}
       <div className="flex h-[60px] w-full bg-[#fff] p-2 shadow-lg fixed top-0 z-10">
-        <h1 className="text-3xl font-bold text-[#5fa437]">Settings</h1>
+        <h1 className="text-3xl font-bold text-[#5fa437]">Test Lab</h1>
       </div>
     
       {/* Sensor Data Table */}

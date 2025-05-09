@@ -3,8 +3,10 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { getDatabase } from "firebase/database"; // Import Firebase Realtime Database
 
+// Paste the firebase Config here
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBNxL-h6Dz18pU-ZmBx_MUFuuNVCsGOEPE",
+  apiKey: "//Paste your firebase configuration here",
   authDomain: "smartfarming-b9715.firebaseapp.com",
   databaseURL: "https://smartfarming-b9715-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "smartfarming-b9715",

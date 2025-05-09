@@ -110,7 +110,7 @@ const firestore = getFirestore(app);
 
 export { rdb, firestore };
 ```
-# Folder Structure
+## Folder Structure
 ```bash
 /agrion
   /public           # Public assets (index.html, images)
@@ -125,7 +125,7 @@ export { rdb, firestore };
   package.json      # Project dependencies and scripts
   vite.config.js    # Vite configuration
   ```
-# Dashboard Features
+## Dashboard Features
 The dashboard provides a clean and user-friendly interface for the following:
 
 System Info: Display device ID and location
@@ -138,7 +138,7 @@ Monitoring Mode: Toggle between manual and automated modes for controlling actua
 
 Actuator Control: Manually turn on/off actuators like lights, fans, and water pumps
 
-# Sensor Setup
+## Sensor Setup
  Sensors are connected to the ESP32 and send data to Firebase Realtime Database for real-time monitoring. The following sensors are supported:
 
 DHT11: For temperature and humidity
@@ -151,7 +151,7 @@ pH Sensor: For measuring soil pH
 
 These sensors are configured in the ESP32 firmware and send periodic readings to the Firebase database.
 
-# Actuator Control
+## Actuator Control
 The system can control three actuators:
 
 Grow Light: Controlled via GPIO pin
@@ -162,10 +162,10 @@ Water Pump: Controlled via GPIO pin
 
 Users can control these actuators manually via the dashboard or automatically when in automated mode.
 
-# Threshold Settings
+## Threshold Settings
 Threshold values for each sensor (temperature, humidity, light, soil moisture, pH, nitrogen, phosphorus, potassium) are adjustable based on the selected crop type and growth phase. These values are pre-configured for different crops and growth stages, but users can modify them for their specific needs.
 
-# Contributing
+## Contributing
 We welcome contributions to improve the Agrion project! Feel free to fork the repository and submit pull requests. Please follow these steps:
 
 ## Fork the repository

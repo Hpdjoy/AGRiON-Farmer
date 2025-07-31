@@ -21,7 +21,7 @@
     "dotenv": "^17.2.1",
     "firebase": "^11.5.0",
     "framer-motion": "^12.10.5",
-    "lucide-react": "^0.486.0",
+    "lucide-react": "^0.525.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",

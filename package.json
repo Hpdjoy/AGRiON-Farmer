@@ -20,7 +20,7 @@
     "axios": "^1.8.4",
     "dotenv": "^17.2.1",
     "firebase": "^11.5.0",
-    "framer-motion": "^12.10.5",
+    "framer-motion": "^12.23.1",
     "lucide-react": "^0.486.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

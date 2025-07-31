@@ -22,7 +22,7 @@
     "firebase": "^11.5.0",
     "framer-motion": "^12.10.5",
     "lucide-react": "^0.486.0",
-    "react": "^19.0.0",
+    "react": "^19.1.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.4.0",

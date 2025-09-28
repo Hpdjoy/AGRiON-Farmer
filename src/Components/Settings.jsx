@@ -158,6 +158,7 @@ function Settings() {
           <h2 className="text-xl font-bold mb-2">System Info</h2>
           <p><span className="font-semibold">Device ID:</span> {settings.deviceId}</p>
           <p><span className="font-semibold">Location:</span> {settings.location}</p>
+          <p><span className="font-semibold">Device Status:</span> {settings.status}</p>
         </div>
 
         {/* Crop Info */}

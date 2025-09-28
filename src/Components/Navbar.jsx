@@ -14,6 +14,28 @@ const Navbar = () => {
     if (teamSection) {
       teamSection.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false); // Close menu on mobile
+    }else{
+      navigate("/");
+    }
+  };
+  
+  const handleFeatureScroll = () => {
+    const featureSection = document.getElementById("features");
+    if (featureSection) {
+      featureSection.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close menu on mobile
+    }else{
+      navigate("/");
+    }
+  };
+
+  const handleContactScroll = () => {
+    const contactSection = document.getElementById("contact");
+    if(contactSection){
+      contactSection.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close menu on mobile
+    }else{
+      navigate("/");
     }
   };
 
@@ -43,10 +65,22 @@ const Navbar = () => {
           Our Team
         </button>
         <button
+          className="text-gray-700 hover:text-[#5fa437] font-medium"
+          onClick={handleFeatureScroll}
+        >
+          Features
+        </button>
+        <button
+            className="text-gray-700 hover:text-[#5fa437] font-medium"
+            onClick={handleContactScroll}
+          >
+            Contact
+          </button>
+        <button
           className="bg-[#5fa437] text-white font-bold py-2 px-6 rounded-md hover:bg-[#4e852e]"
           onClick={() => navigate("/login")}
         >
-          Login
+          Dashboard
         </button>
       </div>
 
@@ -58,6 +92,18 @@ const Navbar = () => {
             onClick={handleTeamScroll}
           >
             Our Team
+          </button>
+          <button
+            className="text-gray-700 hover:text-[#5fa437] font-medium"
+            onClick={handleFeatureScroll}
+          >
+            Features
+          </button>
+          <button
+            className="text-gray-700 hover:text-[#5fa437] font-medium"
+            onClick={handleFeatureScroll}
+          >
+            Contact
           </button>
           <button
             className="bg-[#5fa437] text-white font-bold py-2 px-6 rounded-md hover:bg-[#4e852e]"

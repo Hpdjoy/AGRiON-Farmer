@@ -66,7 +66,9 @@ function Sidebar({ showSidebar, setShowSidebar, setIsloggedIn }) {
         <Link to="/home/llm" className="sidebar-link">
         <div className="flex items-center gap-4 p-2 hover:bg-white/10 rounded-md">
         <FaBrain  className="text-4xl" />
-            {showSidebar && <span className="text-lg">AgriOn AI</span>}
+            {showSidebar && <span className="text-lg">AgriOn AI <span className="bg-red-600 rounded-full text-sm p-0.5 px-3 border-b-green-500 border-t-blue-500 border-l-yellow-500 border-r-black border-2">MVP</span></span>}
+             {!showSidebar && (<span className="bg-red-600 rounded-full text-sm p-1 animate-ping"></span> 
+            ) } 
           </div>
         </Link>
 
@@ -86,8 +88,9 @@ function Sidebar({ showSidebar, setShowSidebar, setIsloggedIn }) {
 
         <Link to="/home/test" className="sidebar-link">
           <div className="flex items-center gap-4 p-2 hover:bg-white/10 rounded-md">
-            <GrTest className="text-4xl" />
-            {showSidebar && <span className="text-lg">Test Lab</span>}
+            <GrTest className="text-4xl" /> 
+            {showSidebar && (<span className="text-lg ">Test Lab <span className="bg-red-600 rounded-full text-sm p-0.5 px-3 border-b-green-500 border-t-blue-500 border-l-yellow-500 border-r-black  border-2"> DEV</span> </span> 
+            ) } 
           </div>
         </Link>
 

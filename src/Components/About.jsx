@@ -1,5 +1,17 @@
 import { useNavigate } from "react-router-dom";
-import { FaLinkedin } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaGlobe,
+  FaRobot,
+  FaLeaf,
+  FaChartLine,
+  FaTachometerAlt,
+  FaGithub
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar.jsx";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -70,46 +82,72 @@ function MainPage() {
   const team = [
     {
       name: "Harsha",
-      img: "https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Harsha.png?alt=media&token=4959f47d-5f5d-4e8c-81be-69b9a87b3b1f",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQEuaew4D5e81w/profile-displayphoto-scale_400_400/B56Zk6B1O9G0Ag-/0/1757615185439?e=1761782400&v=beta&t=1HO_JQGHW4UhKw7aql17CWvr5umeml5ZJehnc8Q4gQ8",
       role: "Team Lead",
       linkedin: "https://www.linkedin.com/in/hpdjoy",
+      github: "https://www.github.com/hpdjoy",
+      portfolio: "https://hpdjoy.tech",
     },
     {
       name: "Abinash M.",
-      img: "https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/CaptionAbhi.png?alt=media&token=05e869ea-0f44-4196-a0db-1b4b8c283e5b",
-      role: "Frontend Dev",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQGQjPGLW_N6FQ/profile-displayphoto-scale_400_400/B56ZkkyAAAHQAg-/0/1757258712914?e=1761782400&v=beta&t=G6M__01KdJZ8kwoVTjMuh8aTGKAhe9ijaf1rD-_Vg0Y",
+      role: "Funds & PR",
       linkedin: "https://www.linkedin.com/in/abinash-mohapatra-167278297/",
     },
     {
       name: "S. Nirlipta",
-      img: "https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Nirlipta.png?alt=media&token=f83ed14d-976b-4e20-84ec-4c6bb0935eff",
-      role: "Backend Dev",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQFGGxDHw29LDA/profile-displayphoto-scale_400_400/B56ZjqD4irHcAk-/0/1756273547448?e=1761782400&v=beta&t=LFi5bz8u78PRwbNKtKkyfHbB98OjZVWU2Go7_91L-8o",
+      role: "Technical Lead",
       linkedin: "https://www.linkedin.com/in/snirliptanitinimagna/",
     },
     {
       name: "Abinash N.",
-      img: "https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Abinash.png?alt=media&token=a1da14a7-6aa0-4ff1-932d-d608e9f9a0f4",
-      role: "ML Engineer",
+      img: "https://media.licdn.com/dms/image/v2/D5635AQHME7Fs0hzUbA/profile-framedphoto-shrink_400_400/B56Zi5THakHAAg-/0/1755455453191?e=1759683600&v=beta&t=0roSWrD4LwfkoRekCQ8Yyj2vdh0vRrqWjflBGIXs0bE",
+      role: "Prototype Designer",
       linkedin: "https://www.linkedin.com/in/abinash-nanda-2207232a9/",
     },
     {
       name: "Chinmay S.",
-      img: "Chinmay.png",
-      role: "ML Engineer",
+      img: "https://media.licdn.com/dms/image/v2/D4E03AQGZ7mBgnLb0_w/profile-displayphoto-shrink_400_400/B4EZdiRIGRGwAk-/0/1749700347425?e=1761782400&v=beta&t=Lmy5-VBROHhdrQ1R3Ii_joM-Vv3RhsoTRtvZtR_0b7o",
+      role: "Web Developer",
       linkedin: "https://www.linkedin.com/in/amit-profile",
     },
     {
       name: "Amit K. Sharma",
-      img: "https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Amit.png?alt=media&token=87eff528-07a4-41db-b338-2f1d547ededc",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQFct6UVErRtwQ/profile-displayphoto-shrink_400_400/B56ZZwng0BHUAg-/0/1745646129403?e=1761782400&v=beta&t=m3pRWFLOPJFZ8kbp8DIHT0tb8GXMnhrsRjBBINpxnJ8",
       role: "Hardware Engineer",
       linkedin:
         "https://www.linkedin.com/in/amit-kumar-sharma-8a79b4222/",
+      github: "https://github.com/amitops2103"
     },
     {
-      name: "Smurti R. Rout",
-      img: "https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Smurti.png?alt=media&token=641fb9c0-aa02-4403-b9b6-43cebd57a82c",
+      name: "Smruti R. Rout",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQEHMOeLUMKadQ/profile-displayphoto-scale_400_400/B56ZlCyde0IsAg-/0/1757762151761?e=1761782400&v=beta&t=mwMUQTsis2v-hL9n1PlddRKkn0jieIH4vgegJgrLLU0",
       role: "Hardware Engineer",
       linkedin: "https://www.linkedin.com/in/smrutranjan2004/",
+    },
+  ];
+
+  const featureList = [
+    {
+      icon: FaRobot,
+      title: "AI Crop Solution Bot",
+      description: "Get instant, crop-specific advice and solutions for farming challenges powered by an intelligent AI assistant."
+    },
+    {
+      icon: FaTachometerAlt,
+      title: "Live Environmental Monitoring",
+      description: "Real-time data streams for climate, soil health, temperature, and water levels to ensure optimal growing conditions."
+    },
+    {
+      icon: FaLeaf,
+      title: "Automated Climate Control",
+      description: "The system automatically adjusts greenhouse climate factors (humidity, ventilation, light) based on crop needs."
+    },
+    {
+      icon: FaChartLine,
+      title: "Soil Moisture Trends",
+      description: "View historical data and predictive trends for soil moisture, enabling precise and efficient watering schedules."
     },
   ];
 
@@ -129,7 +167,7 @@ function MainPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to AGRiON
+          WELCOME TO <span className="text-black">AGRi</span>ON
         </motion.h1>
 
         <motion.p
@@ -138,8 +176,8 @@ function MainPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Experience the future of agriculture with our Automated Adaptive
-          Greenhouse technology — boosting plant growth and maximizing yield.
+          Experience the future of agriculture with our <strong>Automated Adaptive
+            Greenhouse technology</strong> — boosting plant growth and maximizing yield.
         </motion.p>
 
         <motion.button
@@ -153,34 +191,85 @@ function MainPage() {
         </motion.button>
       </section>
 
+      {/* --- New Features Section --- */}
+      <section id="features" className="bg-gray-50 py-20 px-6">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          Features
+        </h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          {featureList.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <feature.icon className="text-5xl text-[#5fa437] mb-4" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <button
+            className="bg-transparent border-2 border-[#5fa437] text-[#5fa437] font-bold py-3 px-8 rounded-md hover:bg-[#5fa437] hover:text-white transition text-lg"
+            onClick={() => navigate("./login")}
+          >
+            Explore the Dashboard
+          </button>
+        </div>
+      </section>
+      {/* --------------------------- */}
+
       {/* Team Section */}
       <section id="team" className="bg-white py-20 px-6">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
           Meet Our Team
         </h2>
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
+
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center hover:shadow-xl transition"
+              className="bg-gray-50 rounded-xl shadow-md p-6 flex items-center hover:shadow-xl transition"
             >
+              {/* Left Side - Photo */}
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-32 h-32 object-cover rounded-full mb-4 shadow"
+                className="w-24 h-24 object-cover rounded-full shadow-md mr-6"
               />
-              <h3 className="text-xl font-semibold text-gray-800">
-                {member.name}
-              </h3>
-              <p className="text-sm text-gray-500">{member.role}</p>
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center text-[#5fa437] hover:text-[#4e852e] transition"
-              >
-                <FaLinkedin className="mr-2" /> LinkedIn
-              </a>
+
+              {/* Right Side - Info */}
+              <div className="flex flex-col">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-gray-500 mb-3">{member.role}</p>
+
+                {/* Social Links */}
+                <div className="flex gap-4">
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-[#5fa437] hover:text-[#4e852e] transition"
+                  >
+                    <FaLinkedin className="mr-1" /> LinkedIn
+                  </a>
+
+                  {member.github && (
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#5fa437] hover:text-[#4e852e] transition"
+                    >
+                      <FaGithub className="mr-1" /> GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -195,7 +284,7 @@ function MainPage() {
           </h2>
           <div className="flex flex-col sm:flex-row items-center gap-8 bg-white shadow-lg rounded-2xl p-8 transition-all duration-300">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Satish.png?alt=media&token=acad868a-5b3d-4eb9-b4b6-ddc6f6868487"
+              src="https://silicon.ac.in/wp-content/uploads/2025/09/1.-Internal-Hackathon.jpg"
               alt="Satish Kumar Das"
               className="w-36 h-36 rounded-full object-cover border-4 border-[#5fa437] shadow-md"
             />
@@ -219,7 +308,7 @@ function MainPage() {
           <div className="mt-12 space-y-8">
             <div className="flex flex-col sm:flex-row items-center gap-8 bg-white shadow-lg rounded-2xl p-8 transition-all duration-300">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Silicon.jpg?alt=media&token=37ac5627-a539-4db9-b3d9-2c0119b9379d"
+                src="https://silicon.ac.in/wp-content/uploads/2025/02/8.jpg"
                 alt="Silicon University"
                 className="w-36 h-36 rounded-full object-cover border-4 border-[#5fa437] shadow-md"
               />
@@ -238,7 +327,7 @@ function MainPage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-8 bg-white shadow-lg rounded-2xl p-8 transition-all duration-300">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/smartfarming-b9715.firebasestorage.app/o/Sipc.png?alt=media&token=2a910137-8884-42d8-ab17-c702dafd2d88"
+                src="https://silicon.ac.in/wp-content/uploads/2024/01/5.-Techtronics.jpg"
                 alt="SIPC"
                 className="w-36 h-36 rounded-full object-cover border-4 border-[#5fa437] shadow-md"
               />
@@ -326,11 +415,76 @@ function MainPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#5fa437] text-white py-6 text-center">
-        <p className="text-lg font-semibold">
-          AGRiON © {new Date().getFullYear()}
-        </p>
-        <p className="text-sm">Designed for smart and sustainable agriculture</p>
+      <footer className="bg-[#5fa437] text-white py-10">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+
+          {/* Left Section - Branding / Description */}
+          <div>
+            <h2 className="text-2xl font-bold mb-2">AGRiON</h2>
+            <p className="text-sm opacity-90">
+              Smart & Sustainable Agriculture Solutions for the Future.
+            </p>
+            <p className="mt-4 text-sm">
+              © {new Date().getFullYear()} AGRiON. All rights reserved.
+            </p>
+          </div>
+
+          {/* Right Section - Contact & Social */}
+          <div id="contact" className="text-sm">
+            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <FaEnvelope className="text-lg" />
+                <a href="mailto:hpdjoy@gmail.com" className="hover:underline">
+                  hpdjoy@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaPhone className="text-lg" />
+                <a href="tel:+919708128569" className="hover:underline">
+                  +91 9708128569
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaMapMarkerAlt className="text-lg" />
+                <span>Bhubaneswar, Odisha, India</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaGlobe className="text-lg" />
+                <a
+                  href="http://hpdjoy.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  hpdjoy.tech
+                </a>
+              </li>
+            </ul>
+
+            {/* Social Media Links */}
+            <div className="flex gap-5 mt-5 text-2xl">
+              <a
+                href="https://www.linkedin.com/in/hpdjoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-200 transition"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.facebook.com/hpdjoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-200 transition"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );

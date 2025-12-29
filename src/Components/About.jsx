@@ -82,50 +82,43 @@ function MainPage() {
   const team = [
     {
       name: "Harsha",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQEuaew4D5e81w/profile-displayphoto-scale_400_400/B56Zk6B1O9G0Ag-/0/1757615185439?e=1761782400&v=beta&t=1HO_JQGHW4UhKw7aql17CWvr5umeml5ZJehnc8Q4gQ8",
-      role: "Team Lead",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQEuaew4D5e81w/profile-displayphoto-scale_400_400/B56Zk6B1O9G0Ag-/0/1757615185439?e=1768435200&v=beta&t=O_SjxXFT-y9ArEeirVc4LaTrrCNehdB28EwVXTKDYLU",
+      role: "Project Lead",
       linkedin: "https://www.linkedin.com/in/hpdjoy",
       github: "https://www.github.com/hpdjoy",
       portfolio: "https://hpdjoy.tech",
     },
     {
       name: "Abinash M.",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQGQjPGLW_N6FQ/profile-displayphoto-scale_400_400/B56ZkkyAAAHQAg-/0/1757258712914?e=1761782400&v=beta&t=G6M__01KdJZ8kwoVTjMuh8aTGKAhe9ijaf1rD-_Vg0Y",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQFWS67ODHR89g/profile-displayphoto-scale_400_400/B56ZtSTm5SJ8Ag-/0/1766612431225?e=1768435200&v=beta&t=pggdIevaBX_6cXBqwLlWT5lJiwjbyNUo9qTZQOZNjuQ",
       role: "Funds & PR",
       linkedin: "https://www.linkedin.com/in/abinash-mohapatra-167278297/",
     },
     {
       name: "S. Nirlipta",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQFGGxDHw29LDA/profile-displayphoto-scale_400_400/B56ZjqD4irHcAk-/0/1756273547448?e=1761782400&v=beta&t=LFi5bz8u78PRwbNKtKkyfHbB98OjZVWU2Go7_91L-8o",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQFGGxDHw29LDA/profile-displayphoto-scale_400_400/B56ZjqD4irHcAk-/0/1756273547448?e=1768435200&v=beta&t=QpboPYCZYjZNc9IwPQsiXBztnJBYZzEAtWN8f4RidMg",
       role: "Technical Lead",
       linkedin: "https://www.linkedin.com/in/snirliptanitinimagna/",
     },
     {
       name: "Abinash N.",
-      img: "https://media.licdn.com/dms/image/v2/D5635AQHME7Fs0hzUbA/profile-framedphoto-shrink_400_400/B56Zi5THakHAAg-/0/1755455453191?e=1759683600&v=beta&t=0roSWrD4LwfkoRekCQ8Yyj2vdh0vRrqWjflBGIXs0bE",
-      role: "Prototype Designer",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQHD-L-Hc0IOhw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1704914333388?e=1768435200&v=beta&t=bPYwXoy98VVDo5tO8coLE36SGgiU-i_fdvL9lCyd1Vw",
       linkedin: "https://www.linkedin.com/in/abinash-nanda-2207232a9/",
     },
     {
       name: "Chinmay S.",
-      img: "https://media.licdn.com/dms/image/v2/D4E03AQGZ7mBgnLb0_w/profile-displayphoto-shrink_400_400/B4EZdiRIGRGwAk-/0/1749700347425?e=1761782400&v=beta&t=Lmy5-VBROHhdrQ1R3Ii_joM-Vv3RhsoTRtvZtR_0b7o",
-      role: "Web Developer",
-      linkedin: "https://www.linkedin.com/in/amit-profile",
+      img: "https://media.licdn.com/dms/image/v2/D4E03AQGZ7mBgnLb0_w/profile-displayphoto-shrink_400_400/B4EZdiRIGRGwAk-/0/1749700347425?e=1768435200&v=beta&t=Ttp_DrQ2y4gTfU7wmam83YbzOMdNMuqyJXgscDC1Jbo",
+      role: "Android Developer",
+      linkedin: "https://www.linkedin.com/in/chinmaya-sahoo-b41903307/",
     },
     {
       name: "Amit K. Sharma",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQFct6UVErRtwQ/profile-displayphoto-shrink_400_400/B56ZZwng0BHUAg-/0/1745646129403?e=1761782400&v=beta&t=m3pRWFLOPJFZ8kbp8DIHT0tb8GXMnhrsRjBBINpxnJ8",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQFct6UVErRtwQ/profile-displayphoto-shrink_400_400/B56ZZwng0BHUAg-/0/1745646129403?e=1768435200&v=beta&t=bkI3uMikgqhCI6Afgan9Mgw-vqikgRnU57ayTGKGHXQ",
       role: "Hardware Engineer",
       linkedin:
         "https://www.linkedin.com/in/amit-kumar-sharma-8a79b4222/",
       github: "https://github.com/amitops2103"
-    },
-    {
-      name: "Smruti R. Rout",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQEHMOeLUMKadQ/profile-displayphoto-scale_400_400/B56ZlCyde0IsAg-/0/1757762151761?e=1761782400&v=beta&t=mwMUQTsis2v-hL9n1PlddRKkn0jieIH4vgegJgrLLU0",
-      role: "Hardware Engineer",
-      linkedin: "https://www.linkedin.com/in/smrutranjan2004/",
-    },
+    }
   ];
 
   const featureList = [

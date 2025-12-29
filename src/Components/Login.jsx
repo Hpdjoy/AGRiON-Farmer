@@ -145,7 +145,7 @@ function Login(props) {
           </Button>
 
 
-          <div className="w-full">
+          
             <Button
               variant="contained"
               startIcon={<AccessibilityNewIcon />}
@@ -168,8 +168,6 @@ function Login(props) {
             >
               {loadingDemo ? <DemoLoader /> : <span>Demo (No Signup Required)</span>}
             </Button>
-          </div>
-
 
           <span className="text-red-600 text-sm text-center">
             Notice: Demo account is for trial purposes only.
